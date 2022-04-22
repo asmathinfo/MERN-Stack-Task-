@@ -1,23 +1,20 @@
-const { MongoClient } = require("mongodb");
+const mongoose = require('mongoosse');
 
-// Connection URI
-const uri =
-  "mongodb+srv://user:12345@mern-cluster.xylyi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
-// Create a new MongoClient
-const client = new MongoClient(uri);
 
-async function run() {
-  try {
-    // Connect the client to the server
-    await client.connect();
+const connectDB = async () => {
+    try{
+        await mongoose.connect('mongodb+srv://user:<password>@mern-cluster.xylyi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{
+            UseNewUrlPaser:true,
+            UseUnifiedTopology:true
 
-    // Establish and verify connection
-    await client.db("admin").command({ ping: 1 });
-    console.log("Connected successfully to server");
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
-}
-run().catch(console.dir);
+        });
+
+        console.log('Database Connection Successfully')
+
+    }catch (err){
+        console.log(err);
+    }
+};
+
+module.exports = connectDB;
