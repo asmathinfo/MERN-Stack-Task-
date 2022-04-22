@@ -1,0 +1,19 @@
+{
+  "name": "mern-stack-task-",
+  "version": "1.0.0",
+  "description": "Mern stack technical task",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asmathinfo/MERN-Stack-Task-.git"
+  },
+  "author": "asmath",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asmathinfo/MERN-Stack-Task-/issues"
+  },
+  "homepage": "https://github.com/asmathinfo/MERN-Stack-Task-#readme"
+}
